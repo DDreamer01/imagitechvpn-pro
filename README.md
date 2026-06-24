@@ -57,7 +57,7 @@ Built and tested exclusively for **Ubuntu (20.04, 22.04, 24.04)** and **Debian (
 
 - **Real-Time Session Monitor** — Python daemon (`daemon.py`) polls every 30 seconds to enforce max concurrent login limits per user. Violators are instantly locked and notified via Telegram.
 - **Bandwidth Accounting** — Granular byte-level tracking via `/proc/io` and Xray's gRPC Stats API. Per-user GB limits enforced with automatic disconnection when quota is reached.
-- **Ghost Process Reaper** — Automatically detects and purges Linux OS accounts for expired/locked users. Sends a single Telegram alert per ghost (no spam) and aggressively kills stale sessions.
+- **Ghost Process Reaper** — Automatically detects and purges Linux OS accounts for expired or locked users. Sends a single Telegram alert per ghost (no spam) and aggressively kills stale sessions.
 - **Fail2Ban Integration** — Deploy Fail2Ban directly from the Settings menu to block brute-force SSH attacks.
 - **AES-256-CBC Encrypted Backups** — Military-grade encryption with PBKDF2 key derivation for database, TLS certificates, and DNS keys.
 - **TCP KeepAlives** — Kernel-level heartbeats prevent Cloudflare and Azure from silently dropping idle connections.
